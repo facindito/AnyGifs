@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       <section className="App-content">
         <Link to="/">
-          <h1 className="App-logo">AnyGifs</h1>
+          <div className="App-logo">
+            <h1>AnyGifs</h1>
+          </div>
         </Link>
         <GifsContextProvider>
           <Route
