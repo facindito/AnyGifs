@@ -5,21 +5,20 @@
 .App-logo {
   margin: 10px auto;
   padding: 20px 0;
-  width: 144px;
-  color: #09f
+  color: #09f;
 }
 
-.App-logo img {
-  object-fit: cover;
-  width: 100%;
+.App-logo h1 {
+  cursor:pointer;
+  margin: 0;
 }
 
 .App-title {
-  color: #09f
+  color:#09f;
 }
 
 .App-content {
-  background-color: #333;
+  background-color: #121212;
   color: white;
   display: flex;
   flex-direction: column;
