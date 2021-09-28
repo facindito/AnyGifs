@@ -11,6 +11,7 @@ export default function SearchResults ({ params }) {
   const externalRef = useRef()
   const {isNearScreen} = useNearScreen({externalRef: loading ? null : externalRef, once: false})
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceHandleNextPage = useCallback(debounce(
     () => setPage( prevPage => prevPage + 1)
   ), [])
@@ -24,11 +25,13 @@ export default function SearchResults ({ params }) {
     {loading
       ? <Spinner />
       : <>
-        <h3 className="App-title">
-          {decodeURI(keyword)}
-        </h3>
-        <ListOfGifs gifs={gifs} />
-        <div id="visor" ref={externalRef}></div>
+        <div className="App-wrapper">
+          <h3 className="App-title">
+            {decodeURI(keyword)}
+          </h3>
+          <ListOfGifs gifs={gifs} />
+          <div id="visor" ref={externalRef}></div>
+        </div>
       </>
     }
   </>
