@@ -1,4 +1,4 @@
-const apiKey = 'MJKVTBd7rHT8w7k7Z4MLmfoEaQcKzZe3'
+//const apiKey = 
 
 
 export default function getGifs ({keyword = 'anime'} = {}){
