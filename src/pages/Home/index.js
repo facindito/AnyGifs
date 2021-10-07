@@ -4,7 +4,7 @@ import { useGifs } from 'hooks/useGifs'
 import ListOfGifs from 'components/ListOfGifs'
 import TrendingSearches from 'components/TrendingSearches'
 import SearchForm from 'components/SearchForm'
-
+import { Helmet } from 'react-helmet'
 
 export default function Home () {
   // eslint-disable-next-line no-unused-vars
@@ -19,6 +19,9 @@ export default function Home () {
 
   return(
     <>
+      <Helmet>
+        <title> Home | AnyGifs</title>
+      </Helmet>
      <header className="o-header">
        <SearchForm onSubmit={handlerSubmit}/>
      </header>
