@@ -21,6 +21,7 @@ export default function Home () {
     <>
       <Helmet>
         <title> Home | AnyGifs</title>
+        <link rel="canonical" href="https://anygifs.vercel.app"/>
       </Helmet>
      <header className="o-header">
        <SearchForm onSubmit={handlerSubmit}/>
