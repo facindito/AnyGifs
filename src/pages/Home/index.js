@@ -1,39 +1,32 @@
-import React, { useCallback } from 'react'
-import {useLocation } from 'wouter'
+import React from 'react'
+
 import { useGifs } from 'hooks/useGifs'
 import ListOfGifs from 'components/ListOfGifs'
 import TrendingSearches from 'components/TrendingSearches'
 import SearchForm from 'components/SearchForm'
 import { Helmet } from 'react-helmet'
 
-export default function Home () {
+export default function Home() {
   // eslint-disable-next-line no-unused-vars
-  const [path, pushLocation] = useLocation()
-  // eslint-disable-next-line no-unused-vars
-  const {loading, gifs} = useGifs()
-  
-  const handlerSubmit = useCallback(({keyword}) => {
-    //Navegar a otra ruta
-    pushLocation(`/search/${keyword}`)
-  },[pushLocation])
+  const { loading, gifs } = useGifs()
 
-  return(
+  return (
     <>
       <Helmet>
         <title> Home | AnyGifs</title>
-        <link rel="canonical" href="https://anygifs.vercel.app"/>
+        <link rel="canonical" href="https://anygifs.vercel.app" />
       </Helmet>
-     <header className="o-header">
-       <SearchForm onSubmit={handlerSubmit}/>
-     </header>
+      <header className="o-header">
+        <SearchForm />
+      </header>
       <div className="App-wrapper">
         <div className="App-main">
           <div className="App-results">
             <h3 className="App-title">Última búsqueda</h3>
-            <ListOfGifs gifs={gifs}/>
+            <ListOfGifs gifs={gifs} />
           </div>
           <div className="App-category">
-            <TrendingSearches/>
+            <TrendingSearches />
           </div>
         </div>
       </div>

@@ -9,13 +9,13 @@
 }
 
 .App-logo h1 {
-  cursor:pointer;
+  cursor: pointer;
   margin: 0;
 }
 
 .App-title {
-  color:var(--theme-body-txt);
-  margin-top: 0.6rem;
+  color: var(--theme-body-txt);
+  margin-top: 2rem;
 }
 
 .App-content {
@@ -37,7 +37,7 @@
   align-items: flex-start;
 }
 
-.App-wrapper{
+.App-wrapper {
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
@@ -54,12 +54,11 @@
   width: 100%;
 }
 
-@media screen and (min-width: 55rem){
-  .App-main{
+@media screen and (min-width: 55rem) {
+  .App-main {
     flex-direction: initial;
   }
-
-  .App-category{
+  .App-category {
     position: sticky;
     top: var(--search-size-mx-h);
     width: 40%;
