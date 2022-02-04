@@ -1,5 +1,5 @@
 import { useGifs } from "hooks/useGifs";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import getSingleGif from "services/getSingleGif";
 
 
